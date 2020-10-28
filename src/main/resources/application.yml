@@ -1,4 +1,10 @@
 spring:
+  profiles:
+    active:
+      - aspect
+---
+spring:
+  profiles: aspect
   h2:
     console:
       enabled: true
@@ -10,6 +16,19 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
+---
+spring:
+  profiles:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:./src/main/resources/data/sample
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
 
 
