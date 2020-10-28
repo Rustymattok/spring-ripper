@@ -10,8 +10,10 @@ In this version were realized the next options:
 * During test create in mem H2 Data Base
 * Made tests for functionality v.1
 * Add config for support XML and JSON OutPut.
+
 #v.1-1 details
-*[Aspect Sample with Reflection](https://github.com/Rustymattok/spring-ripper/blob/master/src/main/java/ru/makarov/springripper/logger/LoggerAspect.java). Reflation sample with ArrayList for future.
+
+* [Aspect Sample with Reflection](https://github.com/Rustymattok/spring-ripper/blob/master/src/main/java/ru/makarov/springripper/logger/LoggerAspect.java). Reflation sample with ArrayList for future.
 
 # Commands
 URL:
