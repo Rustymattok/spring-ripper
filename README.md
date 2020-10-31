@@ -14,6 +14,7 @@ In this version were realized the next options:
 #v.1-1 details
 
 * [Aspect Sample with Reflection](https://github.com/Rustymattok/spring-ripper/blob/master/src/main/java/ru/makarov/springripper/logger/LoggerAspect.java). Reflation sample with ArrayList for future.
+* [Proxy and MBean Sample](https://github.com/Rustymattok/spring-ripper/tree/master/src/main/java/ru/makarov/springripper/profilirovanie). PersonController has field for test(see comments).
 
 # Commands
 URL:
