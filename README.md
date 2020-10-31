@@ -26,10 +26,10 @@ Standard
 Education tasks for Spring - ripper
 
 #ToDo
-  * Add Aspect default Spring for Logger
-  * Add Aspect J for Logger
-  * Add Profiles init in Runtime Logger
-  * Add metric for Logger method to compare time.
 
+  * Add AspectJ for Logger
+  * Add React test
+  * Make utility for overload test.
+  
 # Stack of technologies
 Java EE 8, Spring  Boot, Jackson, Liquibase, XML, JSON ,REST API, Hibernate,Junit 5
