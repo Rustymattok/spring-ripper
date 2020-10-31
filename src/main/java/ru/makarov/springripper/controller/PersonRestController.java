@@ -2,10 +2,10 @@ package ru.makarov.springripper.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.makarov.springripper.domain.Person;
+import ru.makarov.springripper.profilirovanie.PostBeanSampleProfilirovanie;
 import ru.makarov.springripper.repository.PersonCrudRepo;
 import ru.makarov.springripper.service.PersonServis;
 
@@ -15,6 +15,7 @@ import java.util.List;
 /**
  * Controller for Person DataBase activities.
  */
+//todo Добавить обработку ошибки отсутствия данных в бд
 @RestController
 public class PersonRestController {
 
@@ -22,10 +23,25 @@ public class PersonRestController {
 
     private final PersonServis servis;
 
+    /**
+     * For Proxy and MBean sample.
+     */
+    private final PostBeanSampleProfilirovanie data;
+
+
     @Autowired
-    public PersonRestController(PersonServis servis, PersonCrudRepo personCrudRepo) {
+    public PersonRestController(PersonServis servis, PersonCrudRepo personCrudRepo, PostBeanSampleProfilirovanie data) {
         this.servis = servis;
         this.personCrudRepo = personCrudRepo;
+        this.data = data;
+    }
+
+    /**
+     * For Proxy and MBean sample.
+     */
+    @GetMapping(value = "/profil")
+    public List<Person> findAllProfil() {
+        return new ArrayList<>(this.data.findAll());
     }
 
     /**
